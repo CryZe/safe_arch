@@ -156,6 +156,9 @@ use core::arch::x86::*;
 #[cfg(target_arch = "x86_64")]
 use core::arch::x86_64::*;
 
+#[cfg(target_arch = "aarch64")]
+submodule!(pub aarch64);
+
 #[cfg(any(target_arch = "x86", target_arch = "x86_64"))]
 submodule!(pub x86_x64 {
   //! Types and functions for safe `x86` / `x86_64` intrinsic usage.
